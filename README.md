@@ -5,13 +5,15 @@
 
 ASTRA is an approach to assumption-based argumentation (ABA) that exploits tree-decompositions for reasoning. ASTRA uses DFLAT, a framework that allows solving reasoning tasks using dynamic programming, by specifying the dynamic programming algorithm in ASP. This algorithm is executed on a tree-decomposition of the problem instance.
 
+We provide dynamic algorithms as encodings for the supported reasoning tasks, a generator of instances, and an archive containg the instances on which we preliminarily evaluated the approach.
+
 # Citation
 ``` TBD```
 
 ## What you need
 
     - terminal
-    - D-FLAT
+    - D-FLAT (https://dbai.tuwien.ac.at/proj/dflat/system/)
     - an encoding
     - an instance
 
