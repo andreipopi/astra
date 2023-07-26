@@ -13,4 +13,12 @@ ASTRA makes use of DFLAT, a framework that allows solving reasoning tasks using 
 
 ## D-FLAT
 
-A pre-compiled version of D-FLAT is available at: https://dbai.tuwien.ac.at/proj/dflat/system/.
+D-FLAT is the ASP dynamic programming framework used in this work. A pre-compiled version of D-FLAT is available at: https://dbai.tuwien.ac.at/proj/dflat/system/. To run our algorithm, this version is sufficient.
+
+## Authors
+
+Andrei Popescu (TU Graz) and Johannes Wallner (TU Graz). For questions or comments contact andrei.popescu@ist.tugraz.at.
+
+## License
+
+This software is released under the MIT License.
