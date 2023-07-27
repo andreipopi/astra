@@ -14,8 +14,8 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 
     - terminal
     - D-FLAT (https://dbai.tuwien.ac.at/proj/dflat/system/)
-    - an encoding
-    - an instance
+    - an encoding (e.g. [Admissible.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/Encodings/Admissible.lp))
+    - an instance (e.g. [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp))
 
 ## Usage
 
