@@ -12,10 +12,10 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 
 ## What you need
 
-    - terminal
-    - D-FLAT (https://dbai.tuwien.ac.at/proj/dflat/system/)
-    - an encoding (e.g. [Admissible.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/Encodings/Admissible.lp))
-    - an instance (e.g. [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp))
+- terminal
+- [D-FLAT](https://dbai.tuwien.ac.at/proj/dflat/system/)
+- an encoding (e.g. [Admissible.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/Encodings/Admissible.lp))
+- an instance (e.g. [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp)
 
 ## Usage
 
@@ -27,6 +27,8 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 Make sure to adjust the path of the algorithm encoding and the problem instance.
 
 ## Problem Instance and Query
+
+[ciao]
 
 A problem instance is a hypergraph specified in terms of ASP predicates. See [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp).
 
