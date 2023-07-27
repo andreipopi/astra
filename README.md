@@ -40,11 +40,11 @@ D-FLAT is the ASP dynamic programming framework used in this work. A pre-compile
 
 ASTRA can achieve the following ABA reasoning tasks:
 
-- Credolous Reasoning [ADM, ST, CO]: credolous acceptance of a query atom under a specific semantics.
+- Credolous Reasoning: credolous acceptance of a query atom under a specific semantics [ADM, ST, CO].
 
-- Skeptical Reasoning under [ADM, ST, CO]: skeptical acceptance of a query atom under a specific semantics.
+- Skeptical Reasoning: skeptical acceptance of a query atom under a specific semantics [ADM, ST, CO].
 
-- Return of acceptable set under [ADM, ST, CO].
+- Return of acceptable sets under [ADM, ST, CO].
 
 
 ## Authors
