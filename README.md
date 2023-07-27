@@ -7,6 +7,8 @@ ASTRA is an approach to assumption-based argumentation (ABA) that exploits tree-
 
 We provide dynamic algorithms as encodings for the supported reasoning tasks, a generator of instances, and an archive containg the instances on which we preliminarily evaluated the approach.
 
+[Paper](https://gitlab.tugraz.at/krr/astra/-/blob/main/Paper/Reasoning%20in%20Assumption-based%20Argumentation%20using%20Tree-decompositions.pdf)
+
 # Citation
 ``` TBD```
 
@@ -20,7 +22,7 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 ## Usage
 
 1. Download D-FLAT
-2. In the D-FLAT main folder run for admissible extensions:
+2. In the D-FLAT main folder run the following (for admissible sets):
 
 ```./dflat -p path_to_astra_parent/astra/Encodings/Admissible.lp < path_to_astra_parent/astra/running_example.lp```
 
