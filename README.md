@@ -20,6 +20,12 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 ## Usage
 
 
+## Problem Instance and Query
+
+A problem instance is a hypergraph specified in terms of ASP predicates. See running_example.lp.
+You can include an atom to be queried through the query predicate directly in the problem instance.
+
+
 ## D-FLAT
 D-FLAT is the ASP dynamic programming framework used in this work. A pre-compiled version of D-FLAT is available at: https://dbai.tuwien.ac.at/proj/dflat/system/. To run our algorithm, this version is sufficient.
 
