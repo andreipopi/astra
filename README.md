@@ -24,7 +24,7 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 1. Download D-FLAT
 2. In the D-FLAT main folder run the following:
 
-- for admissible sets under a semantics (example ADM):
+- for extensions under a semantics (example ADM):
 
 ```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp```
 
