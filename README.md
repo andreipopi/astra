@@ -29,7 +29,8 @@ Make sure to adjust the path of the algorithm encoding and the problem instance.
 ## Problem Instance and Query
 
 A problem instance is a hypergraph specified in terms of ASP predicates. See [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp).
-You can include an atom to be queried through the unary ```query``` predicate directly in the problem instance.
+
+For credolous and skeptical acceptance, you can include the atom to be queried through the unary ```query``` predicate directly in the problem instance.
 
 
 ## D-FLAT
