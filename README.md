@@ -31,6 +31,11 @@ D-FLAT is the ASP dynamic programming framework used in this work. A pre-compile
 
 ## Supported Reasoning Tasks
 
+The solver ASTRA supports the following ABA reasoning tasks:
+• DC-CO, DC-ST: credulous acceptance under complete and stable semantics, and
+• DC-CO, DC-ST: skeptical acceptance under complete and stable semantics, and
+• SE-CO, SE-ST: return of one acceptable set under com- plete and stable semantics.
+
 ## Authors
 
 Andrei Popescu (TU Graz) and Johannes Wallner (TU Graz). For questions or comments contact andrei.popescu@ist.tugraz.at.
