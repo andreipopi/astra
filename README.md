@@ -12,6 +12,17 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 # Citation
 ``` TBD```
 
+## Supported Reasoning Tasks
+
+ASTRA supports the following ABA reasoning tasks:
+
+- Return of **acceptable sets** under **[ADM, ST, CO]**.
+
+- **Credolous Reasoning**: credolous acceptance of a query atom under a specific semantics [ADM, ST, CO].
+
+- **Skeptical Reasoning**: skeptical acceptance of a query atom under a specific semantics [ADM, ST, CO].
+
+
 ## What you need
 
 - terminal
@@ -47,16 +58,6 @@ For credolous and skeptical acceptance, you can include the atom to be queried t
 
 ## D-FLAT
 D-FLAT is the ASP dynamic programming framework used in this work. A pre-compiled version of D-FLAT is available at: https://dbai.tuwien.ac.at/proj/dflat/system/. To run our algorithm, this version is sufficient.
-
-## Supported Reasoning Tasks
-
-ASTRA can achieve the following ABA reasoning tasks:
-
-- **Credolous Reasoning**: credolous acceptance of a query atom under a specific semantics [ADM, ST, CO].
-
-- **Skeptical Reasoning**: skeptical acceptance of a query atom under a specific semantics [ADM, ST, CO].
-
-- Return of **acceptable sets** under **[ADM, ST, CO]**.
 
 
 ## Authors
