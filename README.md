@@ -19,8 +19,12 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 
 ## Usage
 
+1. Download D-FLAT
+2. In the D-FLAT main folder run for admissible extensions:
+
 ```./dflat -p path_to_astra_parent/astra/Encodings/Admissible.lp < path_to_astra_parent/astra/running_example.lp```
 
+Make sure to adjust the path of the algorithm encoding and the problem instance.
 
 ## Problem Instance and Query
 
