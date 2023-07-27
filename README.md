@@ -26,11 +26,9 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 
 ```./dflat -p path_to_astra_parent/astra/Encodings/Admissible.lp < path_to_astra_parent/astra/running_example.lp```
 
-Make sure to adjust the path of the algorithm encoding and the problem instance.
+Make sure to adjust the paths of the algorithm encoding and problem instance.
 
 ## Problem Instance and Query
-
-[ciao]
 
 A problem instance is a hypergraph specified in terms of ASP predicates. See [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp).
 
