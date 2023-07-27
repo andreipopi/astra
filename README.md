@@ -47,7 +47,18 @@ ASTRA supports the following ABA reasoning tasks:
 
 ```./dflat -p path_to_astra_parent/astra/Encodings/com-skept.lp < path_to_astra_parent/astra/running_example.lp```
 
-Make sure to adjust the paths of the algorithm encoding and problem instance.
+In addition, as outlined by the D-FLAT [documentation](https://dbai.tuwien.ac.at/research/report/dbai-tr-2017-107.pdf), you can obtain additional details on the tree decomposition, compute tables at each nodes, and even low-level information about D-FLAT's computed extension pointers, through the following options.
+
+```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp --print-decomposition```
+
+```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp --output human```
+
+```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp --output machine```
+
+To only visualise the number of solutions, use:
+
+```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp --depth 0```
+
 
 ## Problem Instance and Query
 
