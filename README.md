@@ -24,13 +24,13 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 1. Download D-FLAT
 2. In the D-FLAT main folder run the following:
 
-    - for admissible sets under a semantics (example ADM):
+- for admissible sets under a semantics (example ADM):
 
 ```./dflat -p path_to_astra_parent/astra/Encodings/Admissible.lp < path_to_astra_parent/astra/running_example.lp```
 
-    - for credoulous acceptance under a semantics (example CO):
+- for credoulous acceptance under a semantics (example CO):
 
-    - for skeptical acceptance under a semantics (example CO):
+- for skeptical acceptance under a semantics (example CO):
 
 Make sure to adjust the paths of the algorithm encoding and problem instance.
 
