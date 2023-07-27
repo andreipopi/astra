@@ -26,11 +26,15 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 
 - for admissible sets under a semantics (example ADM):
 
-```./dflat -p path_to_astra_parent/astra/Encodings/Admissible.lp < path_to_astra_parent/astra/running_example.lp```
+```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp```
 
 - for credoulous acceptance under a semantics (example CO):
 
+```./dflat -p path_to_astra_parent/astra/Encodings/com-cred.lp < path_to_astra_parent/astra/running_example.lp```
+
 - for skeptical acceptance under a semantics (example CO):
+
+```./dflat -p path_to_astra_parent/astra/Encodings/com-skept.lp < path_to_astra_parent/astra/running_example.lp```
 
 Make sure to adjust the paths of the algorithm encoding and problem instance.
 
