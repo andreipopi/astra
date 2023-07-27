@@ -19,6 +19,8 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 
 ## Usage
 
+```./dflat -p path_to_astra_parent/astra/Encodings/Admissible.lp < path_to_astra_parent/astra/running_example.lp```
+
 
 ## Problem Instance and Query
 
