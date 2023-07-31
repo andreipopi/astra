@@ -18,7 +18,7 @@ ASTRA supports the following ABA reasoning tasks:
 
 - Return of **acceptable sets** under **[ADM, ST, CO]**.
 
-- **Credolous Reasoning**: credolous acceptance of a query atom under a specific semantics [ADM, ST, CO].
+- **Credulous Reasoning**: credulous acceptance of a query atom under a specific semantics [ADM, ST, CO].
 
 - **Skeptical Reasoning**: skeptical acceptance of a query atom under a specific semantics [ADM, ST, CO].
 
@@ -39,7 +39,7 @@ ASTRA supports the following ABA reasoning tasks:
 
 ```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp```
 
-- for credoulous acceptance under a semantics (example CO):
+- for credulous acceptance under a semantics (example CO):
 
 ```./dflat -p path_to_astra_parent/astra/Encodings/com-cred.lp < path_to_astra_parent/astra/running_example.lp```
 
@@ -64,7 +64,7 @@ To only visualise the number of solutions, use:
 
 A problem instance is a hypergraph specified in terms of ASP predicates. See [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp).
 
-For credolous and skeptical acceptance, you can include the atom to be queried through the unary ```query``` predicate directly in the problem instance.
+For credulous and skeptical acceptance, you can include the atom to be queried through the unary ```query``` predicate directly in the problem instance.
 
 
 ## D-FLAT
