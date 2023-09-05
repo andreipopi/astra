@@ -32,8 +32,9 @@ ASTRA supports the following ABA reasoning tasks:
 
 ## Usage
 
-1. Download D-FLAT
-2. In the D-FLAT main folder run the following:
+1. Clone astra
+2. Download D-FLAT
+3. In the D-FLAT main folder run the following:
 
 - for extensions under a semantics (example ADM):
 
