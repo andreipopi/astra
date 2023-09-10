@@ -10,7 +10,7 @@ We provide dynamic algorithms as encodings for the supported reasoning tasks, a 
 [Paper with appendix](https://gitlab.tugraz.at/krr/astra/-/blob/main/Paper/Reasoning%20in%20Assumption-based%20Argumentation%20using%20Tree-decompositions.pdf)
 
 # Citation
-``` TBD```
+Andrei Popescu and Johannes P. Wallner. Reasoning in Assumption-based Argumentation using Tree-decompositions. In Vanina Martinez, Magdalena Ortiz, and Sarah A. Gaggl, editors, Proceedings of the 18th European Conference on Logics in Artificial Intelligence, JELIA 2023, volume 14281 of Lecture Notes in Computer Science pages XXX-YYY, Dresden, Germany, 2023. Springer.
 
 ## Supported Reasoning Tasks
 
