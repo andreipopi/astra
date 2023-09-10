@@ -78,4 +78,4 @@ Andrei Popescu (TU Graz) and Johannes Wallner (TU Graz). For questions or commen
 
 ## License
 
-This software is released under the MIT License and copyrighted by the authors.
+This software is released under the MIT License and copyrighted by the authors. Note that DFLAT is distributed under its own license.
