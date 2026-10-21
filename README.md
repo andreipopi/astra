@@ -1,81 +1,105 @@
 
-## ASTRA - Assumption-based argumentation Solver using Tree-decompositions to Answer reasoning tasks
+# ASTRA
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
-ASTRA is an approach to assumption-based argumentation (ABA) that exploits tree-decompositions for reasoning. ASTRA uses DFLAT, a framework that allows solving reasoning tasks using dynamic programming, by specifying the dynamic programming algorithm in ASP. This algorithm is executed on a tree-decomposition of the problem instance.
+> This is the maintained GitHub repository for ASTRA. The project was originally published in the [TU Graz Knowledge Representation and Reasoning (KRR) GitLab repository](https://gitlab.tugraz.at/krr/astra).
 
-We provide dynamic algorithms as encodings for the supported reasoning tasks, a generator of instances, and an archive containg the instances on which we preliminarily evaluated the approach.
+ASTRA (Assumption-based argumentation Solver using Tree-decompositions to Answer reasoning tasks) is a prototype for reasoning in assumption-based argumentation (ABA) using dynamic programming over tree decompositions. Its algorithms are specified as answer set programming (ASP) encodings and executed by [D-FLAT](https://www.dbai.tuwien.ac.at/proj/dflat/system/). The approach is designed to exploit the structure of ABA instances with low treewidth.
 
-[Paper with appendix](https://gitlab.tugraz.at/krr/astra/-/blob/main/Paper/Reasoning%20in%20Assumption-based%20Argumentation%20using%20Tree-decompositions.pdf)
+The repository contains the encodings for the supported reasoning tasks, an instance generator, a running example, and the instances used in the preliminary evaluation.
 
-# Citation
-Andrei Popescu and Johannes P. Wallner. Reasoning in Assumption-based Argumentation using Tree-decompositions. In Vanina Martinez, Magdalena Ortiz, and Sarah A. Gaggl, editors, Proceedings of the 18th European Conference on Logics in Artificial Intelligence, JELIA 2023, volume 14281 of Lecture Notes in Computer Science pages 192-208, Dresden, Germany, 2023. Springer. [DOI](https://dx.doi.org/10.1007/978-3-031-43619-2_14)
+## Publication
 
-## Supported Reasoning Tasks
+**[Reasoning in Assumption-Based Argumentation Using Tree-Decompositions](https://link.springer.com/chapter/10.1007/978-3-031-43619-2_14)**
 
-ASTRA supports the following ABA reasoning tasks:
+Andrei Popescu and Johannes P. Wallner. JELIA 2023, LNCS 14281, pages 192–208.
 
-- Return of **acceptable sets** under **[ADM, ST, CO]**.
+The version with the appendix is available in the [original project repository](https://gitlab.tugraz.at/krr/astra/-/blob/main/Paper/Reasoning%20in%20Assumption-based%20Argumentation%20using%20Tree-decompositions.pdf).
 
-- **Credulous Reasoning**: credulous acceptance of a query atom under a specific semantics [ADM, ST, CO].
+## Repository contents
 
-- **Skeptical Reasoning**: skeptical acceptance of a query atom under a specific semantics [ADM, ST, CO].
+- [`Encodings/`](Encodings/) contains the D-FLAT encodings.
+- [`running_example.lp`](running_example.lp) is the ABA instance used in the examples below.
+- [`Generator/`](Generator/) contains the random instance generator.
+- [`instances.zip`](instances.zip) contains the instances used in the preliminary evaluation.
 
+## Supported reasoning tasks
 
-## What you need
+ASTRA supports the following tasks under admissible (`adm`), complete (`com`), and stable (`stb`) semantics:
 
-- terminal
-- [D-FLAT](https://dbai.tuwien.ac.at/proj/dflat/system/)
-- an encoding (e.g. [adm-enum.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/Encodings/Admissible.lp))
-- an instance (e.g. [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp)
+- enumeration and counting of assumption sets;
+- credulous acceptance of a query atom;
+- skeptical acceptance of a query atom.
+
+## Requirements
+
+- A terminal
+- [D-FLAT](https://www.dbai.tuwien.ac.at/proj/dflat/system/)
+
+D-FLAT handles the tree decomposition and executes the ASP encoding at each decomposition node. Precompiled versions are available from the D-FLAT project page. The required hyperedge predicates are declared in the `%dflat:` line at the start of each encoding.
 
 ## Usage
 
-1. Clone astra
-2. Download D-FLAT
-3. In the D-FLAT main folder run the following:
+Run D-FLAT from its main directory and replace `/path/to/astra` with the path to this repository.
 
-- for extensions under a semantics (example ADM):
+Enumerate admissible assumption sets:
 
-```./dflat -p path_to_astra_parent/astra/Encodings/adm-enum.lp < path_to_astra_parent/astra/running_example.lp```
+```bash
+./dflat -p /path/to/astra/Encodings/adm-enum.lp \
+  < /path/to/astra/running_example.lp
+```
 
-- for credulous acceptance under a semantics (example CO):
+Check credulous acceptance under complete semantics:
 
-```./dflat -p path_to_astra_parent/astra/Encodings/com-cred.lp < path_to_astra_parent/astra/running_example.lp```
+```bash
+./dflat -p /path/to/astra/Encodings/com-cred.lp \
+  < /path/to/astra/running_example.lp
+```
 
-- for skeptical acceptance under a semantics (example CO):
+Check skeptical acceptance under complete semantics:
 
-```./dflat -p path_to_astra_parent/astra/Encodings/com-skept.lp < path_to_astra_parent/astra/running_example.lp```
+```bash
+./dflat -p /path/to/astra/Encodings/com-skept.lp \
+  < /path/to/astra/running_example.lp
+```
 
-In addition, as outlined by the D-FLAT [documentation](https://dbai.tuwien.ac.at/research/report/dbai-tr-2017-107.pdf), you can obtain additional details on the tree decomposition, computed tables at each nodes, and even low-level information about D-FLAT's computed extension pointers, through the following options.
+Use the corresponding encoding in [`Encodings/`](Encodings/) to change the semantics or reasoning task. Useful D-FLAT options include:
 
-```--print-decomposition```
+- `--print-decomposition` prints the generated tree decomposition.
+- `--output human` shows computed tables and extension pointers in human-readable form.
+- `--output machine` shows the same information in machine-readable form.
+- `--depth 0` shows only the number of solutions.
 
-```--output human```
+Run `./dflat -h` for the complete list of options.
 
-```--output machine```
+## Instance format
 
-To only visualise the number of solutions, use:
+An ABA instance is represented as a hypergraph using ASP facts. The format uses `assumption/1`, `atom/1`, and `rule/1` to declare objects, and `head/2`, `body/2`, and `contrary/2` to describe the ABA framework. See [`running_example.lp`](running_example.lp) for a complete example.
 
-```--depth 0```
+Credulous and skeptical acceptance encodings read the queried atom from the unary `query/1` predicate in the instance.
 
+## Citation
 
-## Problem Instance and Query
-
-A problem instance is a hypergraph specified in terms of ASP predicates. See [running_example.lp](https://gitlab.tugraz.at/krr/astra/-/blob/main/running_example.lp).
-
-For credulous and skeptical acceptance, you can include the atom to be queried through the unary ```query``` predicate directly in the problem instance.
-
-
-## D-FLAT
-D-FLAT is the ASP dynamic programming framework used in this work. A pre-compiled version of D-FLAT is available at: https://dbai.tuwien.ac.at/proj/dflat/system/. To run our algorithm, this version is sufficient.
-
+```bibtex
+@inproceedings{PopescuW23,
+  author    = {Andrei Popescu and Johannes P. Wallner},
+  editor    = {Sarah Alice Gaggl and Maria Vanina Martinez and Magdalena Ortiz},
+  title     = {Reasoning in Assumption-Based Argumentation Using Tree-Decompositions},
+  booktitle = {Logics in Artificial Intelligence},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {14281},
+  pages     = {192--208},
+  publisher = {Springer},
+  year      = {2023},
+  doi       = {10.1007/978-3-031-43619-2_14}
+}
+```
 
 ## Authors
 
-Andrei Popescu (TU Graz) and Johannes Wallner (TU Graz). For questions or comments contact andrei.popescu@ist.tugraz.at.
+Andrei Popescu (TU Graz) and Johannes P. Wallner (TU Graz). For questions or comments, contact [andrei.popescu@ist.tugraz.at](mailto:andrei.popescu@ist.tugraz.at).
 
 ## License
 
-This software is released under the MIT License and copyrighted by the authors. Note that DFLAT is distributed under its own license.
+This software is released under the [MIT License](LICENSE.md). D-FLAT is distributed under its own license.
